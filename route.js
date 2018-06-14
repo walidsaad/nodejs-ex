@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Session = require('../models/sessions');
+const Session = require('./sessions');
 //get all sessions
 router.get('/sessions', function(req, res, next) {
    // res.send('Liste des sessions de formations');
