@@ -1,5 +1,5 @@
 //  OpenShift sample Node application
-const route = require('./routes/route');
+const route = require('./route');
 var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
