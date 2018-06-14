@@ -1,4 +1,5 @@
 //  OpenShift sample Node application
+const route = require('./routes/route');
 var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
@@ -74,6 +75,8 @@ app.get('/', function (req, res) {
   }
 });
 
+
+/*
 app.get('/pagecount', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
@@ -94,6 +97,7 @@ app.use(function(err, req, res, next){
   console.error(err.stack);
   res.status(500).send('Something bad happened!');
 });
+*/
 
 initDb(function(err){
   console.log('Error connecting to Mongo. Message:\n'+err);
@@ -102,4 +106,10 @@ initDb(function(err){
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
 
+//Testtin server
+app.get('/', (req, res)=>{res.send('Hi SNRT!');});
+
+//import routes
+
+app.use('/api', route);
 module.exports = app ;
