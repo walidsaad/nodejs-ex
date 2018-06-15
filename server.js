@@ -56,7 +56,7 @@ var initDb = function(callback) {
     console.log('Connected to MongoDB at: %s', mongoURL);
   });
 };
-
+/*
 app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
@@ -74,7 +74,7 @@ app.get('/', function (req, res) {
     res.render('index.html', { pageCountMessage : null});
   }
 });
-
+*/
 
 /*
 app.get('/pagecount', function (req, res) {
@@ -112,4 +112,4 @@ app.get('/', (req, res)=>{res.send('Hi SNRT!');});
 //import routes
 
 app.use('/api', route);
-module.exports = app ;
+//module.exports = app ;
