@@ -112,4 +112,4 @@ app.get('/', (req, res)=>{res.send('Hi SNRT!');});
 //import routes
 
 app.use('/api', route);
-//module.exports = app ;
+module.exports = app ;
